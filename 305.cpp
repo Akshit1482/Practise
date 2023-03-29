@@ -3,12 +3,12 @@ class Solution
     public:
     //Function to find the next greater element for each element of the array.
     vector<long long> nextLargerElement(vector<long long> arr, int n){
-        stack<int>s;
+        stack<long long>s;
         s.push( -1 ); // starting mein stack mein -1 push kardo
         vector<long long>ans;
         
-        for( int i= n-1; i>=0; i--){  // arr ko last se traverse karna shuru karo, kyunki  humme next element nikalna hai
-            int curr = arr[i];
+        for( long long i= n-1; i>=0; i--){  // arr ko last se traverse karna shuru karo, kyunki  humme next element nikalna hai
+            long long curr = arr[i];
             while( !s.empty() && s.top() <= curr){ // check is the top element is next element or not
                 s.pop();
             }
