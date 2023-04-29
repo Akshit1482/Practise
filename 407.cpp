@@ -62,7 +62,9 @@ class Trie{
                 
                 if( next != NULL ){  // if any child is found
                     prefix.push_back( ch );
-                    printSuggestions( next, temp, prefix );
+                    printSuggestions( next, temp, prefix );  // yeh recursive call, curr ke baad wale string ko temp mein push karega, taki,
+                                                             //loop next children par traverserse karke phaunche, toh hum dobaara yeh recursion 
+                                                             //is children par lagaye
                     prefix.pop_back();
                 }
             }
